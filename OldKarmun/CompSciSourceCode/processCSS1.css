@@ -1,0 +1,484 @@
+/* ---------------------------------------------------
+ Newsflash sender*/
+
+ .close {
+  color: #24d9ff;
+  border: none;
+  position: absolute;
+  top: 1%; right: 1%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #24d9ff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+#myBtn{
+	position: absolute;
+	top: 2%;
+	left: 5%;
+	width: 10%;
+	height: 8%;
+	border: 1px solid #24d9ff;
+	background-color: black;
+	box-shadow: 2px -2px 10px 0px #24d9ff;
+	color: #24d9ff;
+	cursor: pointer;
+	text-align: center;
+	line-height: 140%;	
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 10%;
+  top: 10%;
+  width: 80%; /* Full width */
+  height: 80%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
+  border: 2px solid #24d9ff ;
+  background-color: black;
+}
+.secret{
+	position: absolute;
+	top: 7%;
+	right: 2%;
+	display: block;
+	height: 9%;
+	width: 44%;
+	font-size: 150%;
+	text-align: center;
+
+}
+.goer{
+	position: absolute;
+	cursor: pointer;
+	top: 0; left: 0%; right: 0; bottom:0;
+	background-color: transparent;
+	transition: .2s;
+	width: 49%;
+	height: 100%;
+	text-align: center;
+	
+}
+.stay{
+	position: absolute;
+	cursor: pointer;
+	top: 0; left: 51%; right: 0; bottom:0;
+	background-color: transparent;
+	transition: .5s;		
+	width: 49%;
+	height: 100%;
+	text-align: center;
+}
+.goer:before{
+	position: absolute;
+	width: 99%;
+	height: 100%;
+	content: "Shossrt-term";
+	background-color: transparent;
+	color: #24d9ff;
+	border: 1px solid #24d9ff;
+	transition: .2s;
+	left: 0%;
+}
+.stay:before{
+	position: absolute;
+	content: "Long-term";
+	background-color: transparent;
+	color:gray;
+	transition: .2s;
+	text-align: center;
+	border: 1px solid gray;
+	width: 100%;
+	height: 100%;
+	left: 0%;
+
+	
+}
+input:checked + .goer {
+	background-color: transparent;
+
+}
+input:checked + .stay{
+	background-color: transparent;
+}
+.secret input {
+	display: none;
+}
+.goer.around:before{
+	width: 100%;
+	height: 100%
+	left: 0%;
+	top: 0%;
+	content:"Open";
+	text-align: center;
+}
+.stay.around:before{
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	top: 0%;
+	content: "Secret";
+	text-align: center;
+}
+input:checked + .goer:before{	
+	background-color: transparent;
+	color: gray;
+	border: 1px solid gray;
+	
+}
+input:checked ~.stay:before{
+	background-color: transparent;
+	color: #24d9ff;
+	border: 1px solid #24d9ff;
+
+}
+.cyber{
+	text-align: center;
+	padding-top: 60px;
+	font-size: 30px;
+}
+td, textarea{
+	color: #24d9ff;
+	background-color: transparent;
+	border: 1px solid #24d9ff;
+
+
+
+}
+tr{
+	width: 100%;
+}
+
+
+.switch{
+	position: absolute;
+	top: 7%;
+	left: 2%;
+	display: block;
+	height: 9%;
+	width: 44%;
+	font-size: 150%;
+	text-align: center;
+
+}
+.slider{
+	position: absolute;
+	cursor: pointer;
+	top: 0; left: 0%; right: 0; bottom:0;
+	background-color: transparent;
+	transition: .2s;
+	width: 49%;
+	height: 100%;
+	text-align: center;
+	
+}
+.other{
+	position: absolute;
+	cursor: pointer;
+	top: 0; left: 51%; right: 0; bottom:0;
+	background-color: transparent;
+	transition: .5s;		
+	width: 49%;
+	height: 100%;
+	text-align: center;
+}
+.slider:before{
+	position: absolute;
+	width: 99%;
+	height: 100%;
+	content: "Shossrt-term";
+	background-color: transparent;
+	color: #24d9ff;
+	border: 1px solid #24d9ff;
+	transition: .2s;
+	left: 0%;
+}
+.other:before{
+	position: absolute;
+	content: "Long-term";
+	background-color: transparent;
+	color:gray;
+	transition: .2s;
+	text-align: center;
+	border: 1px solid gray;
+	width: 100%;
+	height: 100%;
+	left: 0%;
+
+	
+}
+input:checked + .slider {
+	background-color: transparent;
+
+}
+input:checked + .other{
+	background-color: transparent;
+}
+.switch input {
+	display: none;
+}
+.slider.round:before{
+	width: 100%;
+	height: 100%
+	left: 0%;
+	top: 0%;
+	content:"Short-term";
+	text-align: center;
+}
+.other.round:before{
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	top: 0%;
+	content: "Long-term";
+	text-align: center;
+}
+input:checked + .slider:before{	
+	background-color: transparent;
+	color: gray;
+	border: 1px solid gray;
+	
+}
+input:checked ~.other:before{
+	background-color: transparent;
+	color: #24d9ff;
+	border: 1px solid #24d9ff;
+
+}
+
+
+#surveytb{
+	border: 1px solid #24d9ff;
+	position: absolute;
+	height: 93%;
+	width: 100%;
+	left: 0%;
+	top: 7%;
+	color: ##24d9ff;
+	background-color: transparent;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+#srvbottom{
+	border-bottom: 0px solid #24d9ff;
+	text-align: center;
+	color: #24d9ff;
+}
+#srvtxt{
+	resize: none;
+	position: absolute;
+	top: 17%;
+	left: 2%;
+	width: 96%;
+	height: 80%;
+	background-color: transparent;
+	color: #24d9ff;
+	border: 1px solid #24d9ff;
+}
+#srvtime{
+	position: absolute;
+	right: 2%;
+	top: 9%;
+	color:#24d9ff;
+}
+#srvctr{
+	position: absolute;
+	left: 2%;
+	top: 9%;
+	color: #24d9ff;
+}
+#srvchk{
+	position: absolute;
+	top: 9%;
+	left: 36%;
+}
+#btnNews{
+	position: absolute;
+	right: 0%;
+	bottom: 0%;
+	width: 30%;
+	height: 15%;
+	border: 1px solid #24d9ff;
+	background-color: black;
+	box-shadow: -3px -3px 10px 0px #24d9ff;
+	color: #24d9ff;
+	cursor: pointer;
+}
+#messTable{
+	position: absolute;
+	top: 0; left: 0; 
+	color: #24d9ff;
+	width: 100%;
+	text-align: center;
+	background-color: transparent;
+	border: 1px solid #24d9ff;
+
+}
+#messageTB{
+	position: absolute;
+	height: 85%;
+	width: 90%;
+	top: 12%;
+	left: 5%;
+	border: 0px solid #24d9ff;
+	overflow-y: scroll;
+	overflow-x:auto; 
+	color: #24d9ff;
+	background-color: transparent;
+	
+}
+.tableid{
+	resize: none;
+	border:none;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+}
+th{
+	
+	width: 100%;
+}
+.time, .adm{
+	width: 18%;
+}
+.mess{
+	width: 41%;
+}
+#newsflashSender{
+	width: 94%;
+	height: 90%;
+  	position: absolute;
+  	top: 55%;
+ 	left: 50%;
+ 	transform: translate(-50%,-50%);
+ 	color: white;
+ 	border:1px solid #24d9ff;
+	padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 0%;
+    background: rgba(0, 0, 0, 0);
+    overflow-y: none;
+    overflow-x: none;
+  
+
+}
+/*
+Newsflash Sender
+----------------------------------------------------------------------
+Money transfer*/
+
+
+input{
+  height: 5vh;
+  
+  font-size: 100%;
+  display: flex;
+  text-align: left;
+  
+}
+ #Send{
+    position: absolute;
+	width: 30%;
+	height: 20%;
+	bottom: 10%;
+	left: 3%;
+	text-align: center;
+	box-shadow: -3px -3px 10px 0px #24d9ff;
+	background-color: black;
+	color: #24d9ff;
+	border:none;
+	font-size: 100%;
+	cursor: pointer;
+	
+}
+
+
+.recieved{
+  position: fixed;
+  right: 3%;
+  top: 3%;
+  width: 30%;
+  overflow-y: scroll;
+  display: block;
+  height: 45%;
+  color: #24d9ff;
+
+}
+.sent{
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  width: 30%;
+  overflow-y: scroll;
+  display: block;
+  height: 45%;
+  color: #24d9ff;
+}
+td,th{
+  padding-right: 30px;
+  color: #24d9ff;
+
+}
+.balance{
+  padding-bottom: 15px;
+  max-width: 60%;
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: #24d9ff;
+}
+
+.logo{
+  font-size: 1.5rem;
+  font-weight: lighter;
+  top:2.5%;
+}
+
+.money2{
+  display: flex;
+}
+#moneyTransbox{
+    width: 90%;
+    height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  border: 0px solid #24d9ff;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  background: rgba(0, 0, 0, 0);
+  text-align: left;
+  text-align: top;
+ }
+
+ .here{
+ 	top: 5%;
+ 	font-size: 20px;
+ }
+/*
+Money Transfer
+----------------------------------------------------
+Refreshing*/
+
+#div{
+    position: absolute;
+    top:0; left: 0;
+    width: 100%;
+    height: 100%;
+border:none;
+  }
+
+  /*
+Refreshing
+----------------------------------------------------
+*/
